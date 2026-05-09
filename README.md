@@ -8,7 +8,6 @@
 
 ## 📌 Sumário
 - [Por que este projeto?](#-por-que-este-projeto)
-- [O README como página de apresentação](#-o-readme-como-página-de-apresentação)
 - [O que está neste template](#-o-que-está-neste-template)
 - [Como começar](#-como-comecar)
 - [Comandos principais](#-comandos-principais)
@@ -23,14 +22,6 @@ Este repositório mostra um fluxo completo de garantia de qualidade:
 - **Crawl dinâmico** de rotas para descobrir páginas da aplicação
 - **Evidências automáticas** com screenshots, tempos e erros
 - **Relatórios** prontos para análise técnica e operacional
-
-## 📝 O README como página de apresentação
-Sim, o `README.md` é a página oficial do seu repositório no GitHub. Ele é o primeiro ponto de contato do avaliador, então vale deixar:
-- estrutura clara
-- linguagem objetiva
-- exemplos de uso
-- informações de segurança
-- links para documentação adicional
 
 ## ✨ O que está neste template
 - Login automatizado com fallback para bootstrap manual
