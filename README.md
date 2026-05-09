@@ -93,12 +93,5 @@ posia-ex-playwright/
 - `RESTRICOES_E_SEGURANCA.md` — guardrails e compliance
 - `RUNBOOK_OPERACIONAL.md` — execução, validação e rollback
 
-## 💡 Como deixar ainda mais bonito
-- Adicione badges reais de status de CI se tiver pipeline
-- Inclua imagens pequenas ou gifs de execução
-- Use seções com títulos claros e frases curtas
-- Mantenha o topo do README enxuto e o conteúdo detalhado abaixo
-- Coloque links para `qa-docs/` para quem quiser ler mais
-
 ## 📝 Licença
 MIT
