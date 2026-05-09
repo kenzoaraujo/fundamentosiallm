@@ -18,5 +18,5 @@
 - **Data**: 2026-05-09
 - **Decisão**: Não versionar credenciais; usar placeholders e variáveis de ambiente.
 - **Motivo**: Compliance com segurança, evitar exposição de dados sensíveis.
-- **Alternativas**: Hardcode (inseguro).
+- **Alternativas**: Hardcode de credenciais (risco de vazamento).
 - **Impacto**: Projeto seguro para compartilhamento público.

@@ -4,11 +4,10 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/kenzoaraujo/fundamentosiallm?style=flat-square)
 ![License](https://img.shields.io/github/license/kenzoaraujo/fundamentosiallm?style=flat-square)
 
-> Exemplo de automação QA com Playwright e crawler de rotas para aplicações web. Projeto educacional para a disciplina **Fundamentos de IA e LLMs para Programadores**.
+> Exemplo de automação QA com Playwright e crawler de rotas para aplicações web. Projeto educacional para a disciplina **Fundamentos de IA e LLMs para Programadores** realizada pelo nosso professor Erick Wendel.
 
 ## 📌 Sumário
 - [Por que este projeto?](#-por-que-este-projeto)
-- [O README como página de apresentação](#-o-readme-como-página-de-apresentação)
 - [O que está neste template](#-o-que-está-neste-template)
 - [Como começar](#-como-comecar)
 - [Comandos principais](#-comandos-principais)
@@ -23,14 +22,6 @@ Este repositório mostra um fluxo completo de garantia de qualidade:
 - **Crawl dinâmico** de rotas para descobrir páginas da aplicação
 - **Evidências automáticas** com screenshots, tempos e erros
 - **Relatórios** prontos para análise técnica e operacional
-
-## 📝 O README como página de apresentação
-Sim, o `README.md` é a página oficial do seu repositório no GitHub. Ele é o primeiro ponto de contato do avaliador, então vale deixar:
-- estrutura clara
-- linguagem objetiva
-- exemplos de uso
-- informações de segurança
-- links para documentação adicional
 
 ## ✨ O que está neste template
 - Login automatizado com fallback para bootstrap manual
@@ -101,13 +92,6 @@ posia-ex-playwright/
 - `DECISOES_TECNICAS.md` — decisões de arquitetura e segurança
 - `RESTRICOES_E_SEGURANCA.md` — guardrails e compliance
 - `RUNBOOK_OPERACIONAL.md` — execução, validação e rollback
-
-## 💡 Como deixar ainda mais bonito
-- Adicione badges reais de status de CI se tiver pipeline
-- Inclua imagens pequenas ou gifs de execução
-- Use seções com títulos claros e frases curtas
-- Mantenha o topo do README enxuto e o conteúdo detalhado abaixo
-- Coloque links para `qa-docs/` para quem quiser ler mais
 
 ## 📝 Licença
 MIT

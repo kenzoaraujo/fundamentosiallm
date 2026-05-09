@@ -13,6 +13,9 @@
 - Análise de segurança: Nenhum hardcode de credenciais encontrado; .gitignore protege .env
 - Artefatos obrigatórios criados: STATE_OF_PROJECT.md, DECISOES_TECNICAS.md, RESTRICOES_E_SEGURANCA.md, RUNBOOK_OPERACIONAL.md
 - README.md atualizado com objetivo educacional e compliance
+- Arquivos sensíveis removidos: DELIVERABLES_PUBLICACAO.md, CHECKLIST_PUBLICACAO.md
+- Ajustes de segurança: Removida referência específica a ferramentas de cofre de senha
+- .DS_Store removido e adicionado ao .gitignore
 
 ## Pendente
 - Commit e push para GitHub

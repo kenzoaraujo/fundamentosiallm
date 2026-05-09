@@ -1,7 +1,7 @@
 # Restrições e Segurança
 
 ## Guardrails de Segurança
-- **Nunca expor credenciais**: Não versionar senhas, keys, tokens reais. Usar placeholders como [SENHA_DO_1PASSWORD].
+- **Nunca expor credenciais**: Não versionar senhas, keys, tokens reais. Usar placeholders como [SENHA_DO_COFRE].
 - **Mascarar dados sensíveis**: Em logs, evidências e documentação, substituir por placeholders.
 - **Revisão obrigatória**: Qualquer mudança de alto risco deve ser revisada por humano.
 - **Janela operacional**: Sem restrição, mas evitar ações destrutivas sem autorização.
