@@ -1,0 +1,20 @@
+{
+  "name": "posia-ex-playwright",
+  "version": "1.0.0",
+  "description": "Template publico de QA automatizado para aplicacoes web com Playwright",
+  "private": false,
+  "scripts": {
+    "crawl:system": "node scripts/system_crawl_report.js",
+    "auth:bootstrap": "node scripts/bootstrap_storage_state.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test tests/smoke/login-smoke.spec.ts",
+    "report": "playwright show-report"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.59.1",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.59.1"
+  }
+}
