@@ -5,3 +5,4 @@ artifacts/**
 !artifacts/system-crawl/.gitkeep
 .env
 *.zip
+.DS_Store

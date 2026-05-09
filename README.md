@@ -1,91 +1,113 @@
 # posia-ex-playwright
 
-Template público de automação QA para aplicações web com Playwright, crawler resiliente e relatórios multi-formato.
+![GitHub repo size](https://img.shields.io/github/repo-size/kenzoaraujo/fundamentosiallm?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/kenzoaraujo/fundamentosiallm?style=flat-square)
+![License](https://img.shields.io/github/license/kenzoaraujo/fundamentosiallm?style=flat-square)
 
-## Objetivo Educacional
-Este repositório é um exemplo prático da disciplina **Fundamentos de IA e LLMs para Programadores**, ministrada pelo Professor Erick Wendel. Demonstra como implementar automação de testes E2E com Playwright, incluindo:
+> Exemplo de automação QA com Playwright e crawler de rotas para aplicações web. Projeto educacional para a disciplina **Fundamentos de IA e LLMs para Programadores**.
 
-- **Smoke Tests**: Validação rápida de funcionalidades críticas (login, carregamento de páginas).
-- **System Crawl**: Descoberta automática de rotas do sistema para garantir cobertura completa.
-- **Evidências Automáticas**: Captura de screenshots, tempos de carregamento e erros para análise.
-- **Integração em Pipeline**: Exemplo de como adicionar testes automatizados em CI/CD para garantir qualidade contínua.
+## 📌 Sumário
+- [Por que este projeto?](#-por-que-este-projeto)
+- [O README como página de apresentação](#-o-readme-como-página-de-apresentação)
+- [O que está neste template](#-o-que-está-neste-template)
+- [Como começar](#-como-comecar)
+- [Comandos principais](#-comandos-principais)
+- [Estrutura do repositório](#-estrutura-do-repositório)
+- [Segurança e compliance](#-segurança-e-compliance)
+- [Documentação adicional](#-documentação-adicional)
+- [Licença](#-licença)
 
-**Uso Ético**: Projeto exclusivamente para fins educacionais e compartilhamento de conhecimento. Não coletar dados reais de usuários. Respeitar direitos autorais e compliance (LGPD, privacidade).
+## 🎯 Por que este projeto?
+Este repositório mostra um fluxo completo de garantia de qualidade:
+- **Smoke tests** para validar funcionalidades críticas rapidamente
+- **Crawl dinâmico** de rotas para descobrir páginas da aplicação
+- **Evidências automáticas** com screenshots, tempos e erros
+- **Relatórios** prontos para análise técnica e operacional
 
-## O que este template entrega
-1. Login automatizado com fallback para login manual bootstrap.
-2. Re-login automático quando a sessão expira durante o crawl.
-3. Descoberta dinâmica de rotas por prefixo de menu.
-4. Evidências por página (screenshot, tempo, erros HTTP/console).
-5. Relatórios automáticos em:
-   - `crawl.summary.md`
-   - `crawl.report.json`
-   - `crawl.pages.csv`
-   - `crawl.redmine.txt`
+## 📝 O README como página de apresentação
+Sim, o `README.md` é a página oficial do seu repositório no GitHub. Ele é o primeiro ponto de contato do avaliador, então vale deixar:
+- estrutura clara
+- linguagem objetiva
+- exemplos de uso
+- informações de segurança
+- links para documentação adicional
 
-## Estrutura
-```text
-posia-ex-playwright/
-├── .env.example
-├── package.json
-├── playwright.config.ts
-├── scripts/
-│   ├── bootstrap_storage_state.js
-│   └── system_crawl_report.js
-├── tests/smoke/login-smoke.spec.ts
-├── qa-docs/
-│   ├── SETUP_ANALISTA.md
-│   ├── SUMARIO_EXECUTIVO.md
-│   └── WIKIJS_PROJETO_QA_AUTOMACAO_WEB.md
-└── artifacts/system-crawl/
-```
+## ✨ O que está neste template
+- Login automatizado com fallback para bootstrap manual
+- Re-login automático durante o crawl
+- Descoberta de rotas por prefixo de menu configurável
+- Captura de screenshots e métricas de desempenho
+- Geração de relatórios `Markdown`, `JSON`, `CSV` e texto
+- Documentação de processo e compliance em `qa-docs/`
 
-## Setup rápido
+## 🚀 Como começar
 ```bash
+cd posia-ex-playwright
 npm install
 npx playwright install chromium
 cp .env.example .env
 ```
 
-Edite o `.env`:
-- `APP_BASE_URL`: URL da aplicação alvo.
-- `APP_USER`: usuário de teste.
-- `APP_PASS`: senha de teste.
-- `APP_MENU_PREFIX`: prefixo de rotas a serem exploradas (ex.: `/app/`).
+### Configurar `.env`
+Edite o arquivo criado com valores de exemplo:
+- `APP_BASE_URL`: URL da aplicação alvo
+- `APP_USER`: usuário de teste
+- `APP_PASS`: senha de teste
+- `APP_MENU_PREFIX`: prefixo de rotas a serem exploradas (`/app/`)
 
-## Executar
-Autenticacao bootstrap (opcional, recomendado na primeira vez):
+## ▶️ Comandos principais
 ```bash
-npm run auth:bootstrap
+npm run auth:bootstrap     # bootstrap de autenticação
+npm run crawl:system       # executar crawler de rotas
+npm run test:smoke         # rodar smoke tests Playwright
 ```
 
-Crawl completo:
-```bash
-npm run crawl:system
+## 📁 Estrutura do repositório
+```text
+posia-ex-playwright/
+├── .env.example
+├── .gitignore
+├── package.json
+├── playwright.config.ts
+├── scripts/
+│   ├── bootstrap_storage_state.js
+│   └── system_crawl_report.js
+├── tests/
+│   └── smoke/login-smoke.spec.ts
+├── src/
+│   └── helpers/auth.ts
+├── qa-docs/
+│   ├── SETUP_ANALISTA.md
+│   ├── SUMARIO_EXECUTIVO.md
+│   └── WIKIJS_PROJETO_QA_AUTOMACAO_WEB.md
+├── artifacts/
+│   └── system-crawl/.gitkeep
+└── README.md
 ```
 
-Smoke test Playwright:
-```bash
-npm run test:smoke
-```
+## 🔒 Segurança e compliance
+- Nunca versionar credenciais reais
+- Use `.env.example` como modelo
+- `.gitignore` já protege:
+  - `.env`
+  - `node_modules/`
+  - `artifacts/`
+  - `playwright-report/`
+  - `test-results/`
+- Projeto para fins educacionais e compartilhamento de conhecimento
 
-## Onde ficam os resultados
-1. Ponteiro do ultimo run:
-   - `artifacts/system-crawl/LATEST_RUN.txt`
-2. Pasta por execucao:
-   - `artifacts/system-crawl/crawl-<timestamp>/`
+## 📚 Documentação adicional
+- `STATE_OF_PROJECT.md` — status e próximos passos
+- `DECISOES_TECNICAS.md` — decisões de arquitetura e segurança
+- `RESTRICOES_E_SEGURANCA.md` — guardrails e compliance
+- `RUNBOOK_OPERACIONAL.md` — execução, validação e rollback
 
-## Seguranca e publicacao
-Este template foi preparado para publicacao publica:
-1. Sem credenciais reais.
-2. Sem URLs de clientes.
-3. Sem dados de negocio privados.
-4. `.env` ignorado por git.
+## 💡 Como deixar ainda mais bonito
+- Adicione badges reais de status de CI se tiver pipeline
+- Inclua imagens pequenas ou gifs de execução
+- Use seções com títulos claros e frases curtas
+- Mantenha o topo do README enxuto e o conteúdo detalhado abaixo
+- Coloque links para `qa-docs/` para quem quiser ler mais
 
-Antes de publicar fork/projeto derivado:
-1. Revise `.env.example`.
-2. Rode busca por termos sensiveis internos.
-3. Garanta que `artifacts/` nao contenha dados reais.
-
-## Licenca
+## 📝 Licença
 MIT
