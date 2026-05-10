@@ -1,9 +1,5 @@
 # posia-ex-playwright
 
-![GitHub repo size](https://img.shields.io/github/repo-size/kenzoaraujo/fundamentosiallm?style=flat-square)
-![GitHub top language](https://img.shields.io/github/languages/top/kenzoaraujo/fundamentosiallm?style=flat-square)
-![License](https://img.shields.io/github/license/kenzoaraujo/fundamentosiallm?style=flat-square)
-
 > Exemplo de automação QA com Playwright e crawler de rotas para aplicações web. Projeto educacional para a disciplina **Fundamentos de IA e LLMs para Programadores** realizada pelo nosso professor Erick Wendel.
 
 ## 📌 Sumário
