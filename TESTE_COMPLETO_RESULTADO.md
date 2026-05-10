@@ -59,49 +59,15 @@ O template `posia-ex-playwright` foi submetido a uma validação completa e aten
 
 ## 2️⃣ Validação de Segurança & Propriedade
 
-### Detecção de Informações Sensíveis
-```
-Termos buscados:
-- "sovis" (URL proprietária)
-- "webfv" (Nome do projeto original)
-- "app.sovis" (Domínio proprietário)
-- "kenzo" (Nome pessoal)
-- "senha" (Dados sensíveis em português)
+Esta seção foi revisada para garantir que o relatório não exponha termos ou dados sensíveis decorrentes de ambiente, origem ou execução.
 
-Resultado da busca: ✅ ZERO MATCHES
-```
+A validação foi feita com foco em:
+- ausência de credenciais reais no repositório
+- uso de placeholders genéricos em `.env.example`
+- proteção de arquivos gerados com `.gitignore`
+- documentação de segurança adequada
 
-**Exceção Documentada:** 
-- Menções em DELIVERABLES_PUBLICACAO.md são apenas descritivas (checklist), não dados reais
-
-### Análise de Arquivos de Configuração
-
-**`.env.example`** ✅
-```
-APP_BASE_URL=https://example.local       ✅ Genérico
-APP_USER=seu.usuario@empresa.com         ✅ Placeholder
-APP_PASS=sua_senha_segura                ✅ Exemplo não-real
-APP_MENU_PREFIX=/app/                    ✅ Genérico
-CRAWL_MAX_ROUTES=250                     ✅ Padrão sensato
-APP_STORAGE_STATE=...                    ✅ Path genérico
-```
-
-**`.gitignore`** ✅
-```
-node_modules/                 ✅ Exclui dependências
-playwright-report/            ✅ Exclui relatórios
-test-results/                 ✅ Exclui resultados
-artifacts/**                  ✅ Exclui evidências
-.env                          ✅ Exclui secrets
-*.zip                         ✅ Exclui pacotes
-```
-
-**`LICENSE`** ✅
-- MIT License completa incluída
-- Permite uso comercial e pessoal
-- Texto integral presente
-
-**Resultado:** ✅ **Nenhuma informação proprietária ou sensível detectada**
+**Resultado:** ✅ **Relatório limpo de informações sensíveis ou proprietárias**
 
 ---
 
